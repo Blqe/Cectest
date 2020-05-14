@@ -15,19 +15,19 @@ class TargetMap extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      lat: 650, // these coordinates are center of the room. 
-      lng: 600,
-      zoom: 0,
+      lat: 100,
+      lng: 100,
+      zoom: 1,
     };
   }
 
   render() {
-    const center = L.latLng([325, 300])
+    const center = L.latLng([160, 90])
     const position = [this.state.lat, this.state.lng]
     const filepath = cecMap;
     
     const corner1 = L.latLng([0,0])
-    const corner2 = L.latLng([650,600])
+    const corner2 = L.latLng([320,180])
     const bounds = L.latLngBounds(corner2,corner1)
 
     return (     
@@ -46,7 +46,7 @@ class TargetMap extends React.Component {
 
           <Marker position={position}>
             <Popup>
-              You are here. <br />
+              Testing marker <br />
             </Popup>
           </Marker>
         </Map>
